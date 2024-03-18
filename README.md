@@ -50,3 +50,43 @@
 -> git reset --> to undo the changes/// -> move from current state to previous state.
 
    git reset <filename> 
+
+-> Setup git in Linux VM
+    sudo yum install git -y
+    ssh-keygen -> enter -> enter-> enter 
+    to get key -> cat /home/ec2-user/.ssh/id_rsa.pub
+    copy the key to github account in settings -> SSH option
+    git clone <repo SSH URL> -> yes -> enter ---> it will start clone.
+
+=====================================================================================================================================================================================
+    
+Maven Tool:
+-> Maven is build automation tool
+-> using maven we are goint to build the application code written by developers
+-> After build it will generate target folder and .jar file inside init (target/***.jar)
+-> maven is having lifecycle which contains diff stages/phases
+     -> generate resource - Generate required de[pendencies to build application code using maven.
+     -> Compile code -- convert code into binary language (machine readable)
+     -> Unit test --- Maven will test internally diff test cases
+     -> Package ---- Creating .jar file from the code (copying all the required code into jar)
+     -> install ----- Install the .jar on maven server
+     -> Deploy ----- Deploy is ntg but upload/deploy the dependencies and .jar files to maven repository.
+     -> Clean ----- Claen the existing .jar file and recreate new .jar file.
+-> When we download and install maven
+     -> .M2 folder ---- were it containes entire configuration of maven.
+         settings.xml ---- Maven repo URL then username/password.
+         pom.xml ---- when we execute maven commnd will simply follow the pom.xml file
+     -> Using single command we can execute the entire maven lifecycle
+         mvn clean install
+-> Download and install maven in windows/Linux
+Windows:
+    -> https://phoenixnap.com/kb/install-maven-windows (Installation steps)
+    -> https://maven.apache.org/download.cgi (download maven package)
+Linux:
+   -> Sudo yum install maven -y
+   -> maven -version
+
+-> Make sure execute maven command were the POM file is.
+Sample Repo: https://github.com/Renukadema/Calculator.git 
+
+============================================================================================================================================================================================================
